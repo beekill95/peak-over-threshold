@@ -6,7 +6,7 @@ authors = [
     {name = "cbhua"},
 ]
 dependencies = [
-    "numpy>=1.24.4",
+    "numpy",
 ]
 requires-python = ">=3.8"
 readme = "README.md"

@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:b9e1655285b88a59518c77f54c8ec9112125b654d69deba4e84ba63e501c22d7"
+content_hash = "sha256:e8a224628484baf942680094722346e48c2aee2a4dca9b1b9bafd4a0fe39ebec"
 
 [[package]]
 name = "numpy"
