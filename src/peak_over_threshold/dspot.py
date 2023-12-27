@@ -48,7 +48,11 @@ def dspot(data: np.array, num_init: int, depth: int, risk: float):
             gamma, sigma = grimshaw(peaks=peaks, threshold=t)
             k = k + 1
             r = k * risk / peaks.size
-            z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+            # TODO: it should be refactored into a function.
+            if ~np.isclose(gamma, 0.0):
+                z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+            else:
+                z = t - sigma * np.log(r)
             np.delete(base_data, 0)
             np.append(base_data, temp)
         else:

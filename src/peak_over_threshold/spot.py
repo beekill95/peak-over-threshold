@@ -38,7 +38,11 @@ def spot(data: np.array, num_init: int, risk: float):
             gamma, sigma = grimshaw(peaks=peaks, threshold=t)
             k = k + 1
             r = k * risk / peaks.size
-            z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+            # TODO: it should be refactored into a function.
+            if ~np.isclose(gamma, 0.0):
+                z = t + (sigma / gamma) * (pow(r, -gamma) - 1)
+            else:
+                z = t - sigma * np.log(r)
         else:
             k = k + 1
 
