@@ -1,0 +1,17 @@
+[project]
+name = "peak-over-threshold"
+version = "0.0.1"
+description = "Alogrithm about Peaks-over-Threshold, including POT, Stream POT, and Drift POT"
+authors = [
+    {name = "cbhua"},
+]
+dependencies = [
+    "numpy>=1.24.4",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
